@@ -1,6 +1,6 @@
 const request = require("request");
 
-const WEATHERSTACK_API_TOKEN = "8ffc0f8a40d02f4a79ef0ab38df6e5cf";
+const WEATHERSTACK_API_TOKEN = process.env.WEATHERSTACK_API_TOKEN;
 
 const forecast = (latitude, longitude, callback) => {
   const url = `http://api.weatherstack.com/current?access_key=${WEATHERSTACK_API_TOKEN}&query=${latitude},${longitude}`;
