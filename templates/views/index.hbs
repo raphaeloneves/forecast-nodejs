@@ -9,24 +9,27 @@
 </head>
 
 <body>
+    <section>
+        <ul>
+            <li>
+                <img src="assets/img/weather.png" />
+            </li>
+            <li>
+                <h1>Weather App</h1>
+            </li>
+        </ul>
+    </section>
     <div class="main-content">
-        {{>header}}
         <section>
+            <p>Use this app to get your weather! :)</p>
             <form id="forecast-form">
-                <label for="form-location">Location:</label>
-                <input id="form-location" />
-                <button type="submit">Get forecast!</button>
+                <input id="form-location" placeholder="Location"/>
+                <button class='forecast-button' type="submit">Check weather</button>
             </form>
         </section>
 
-        <section id="forecast-box">
-            <p id="location"></p>
-            <p id="region"></p>
-            <p id="country"></p>
-            <img id="weather-icon" />
-            <p id="temperature"></p>
-            <p id="precip"></p>
-        </section>
+        <p id="location"></p>
+        <p id="description"></p>
     </div>
 
     {{>footer}}

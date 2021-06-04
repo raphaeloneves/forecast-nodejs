@@ -8,14 +8,13 @@ forecastForm.addEventListener("submit", (event) => {
       alert(response.error);
       return;
     }
-    document.getElementById("weather-icon").src = response.icon;
-    document.getElementById("location").innerText = response.name;
-    document.getElementById("region").innerText = response.region;
-    document.getElementById("country").innerText = response.country;
-    document.getElementById("temperature").innerText =
-      response.temperature + "º - " + response.weather_description;
-    document.getElementById("precip").innerText = response.precip + "% change of rain";
-    console.log(response);
+    const location = `${response.name} - ${response.region} - ${response.country}`
+    const message = `
+      ${response.weather_description} throughout the day. It's currently ${response.temperature} degress out 
+      and there is ${response.precip}% chance of rain.
+    `
+    document.getElementById("location").innerHTML = location;
+    document.getElementById("description").innerHTML = message;
   });
 });
 
