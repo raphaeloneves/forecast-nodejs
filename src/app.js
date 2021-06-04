@@ -53,7 +53,7 @@ app.get("/forecast", (req, res) => {
       error: "Address is mandatory",
     });
   }
-  geocode(address, (error, { latitude, longitude }) => {
+  geocode(address, (error, { latitude, longitude } = {}) => {
     if (error) {
       return res.send({
         error: error,
