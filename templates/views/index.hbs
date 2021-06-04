@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="icon" href="assets/img/weather.png">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <title>{{pageName}}</title>
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <section>
+            <form id="forecast-form">
+                <label for="form-location">Location:</label>
+                <input id="form-location" />
+                <button type="submit">Get forecast!</button>
+            </form>
+        </section>
+
+        <section id="forecast-box">
+            <p id="location"></p>
+            <p id="region"></p>
+            <p id="country"></p>
+            <img id="weather-icon" />
+            <p id="temperature"></p>
+            <p id="precip"></p>
+        </section>
+    </div>
+
+    {{>footer}}
+
+    <script src="assets/js/forecast.js"></script>
+</body>
+
+</html>
