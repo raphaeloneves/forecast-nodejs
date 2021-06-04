@@ -10,6 +10,20 @@ body {
     min-height: 100vh
 }
 
+ul {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+li {
+    display: inline-block;
+}
+
+li > img {
+    padding-right: 10px;
+}
+
 .main-content {
     flex-grow: 1;
 }
@@ -39,4 +53,28 @@ header a {
 
 .portrait {
     width: 250px;
+}
+
+input {
+    padding: 20px;
+    display: inline-block;
+    color: #494949 !important;
+    text-transform: uppercase;
+}
+
+.forecast-button {
+	color: #494949 !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #ffffff;
+	padding: 20px;
+	border: 1px solid #494949 !important;
+	display: inline-block;
+	transition: all 0.4s ease 0s;
+}
+
+.forecast-button:hover {
+	color: #494949 !important;
+	background: #e3e3e3;
+	transition: all 0.4s ease 0s;
 }
