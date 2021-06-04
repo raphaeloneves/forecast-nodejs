@@ -1,4 +1,5 @@
 const request = require("request");
+require('dotenv').config();
 
 const WEATHERSTACK_API_TOKEN = process.env.WEATHERSTACK_API_TOKEN;
 

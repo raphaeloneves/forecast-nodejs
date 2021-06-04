@@ -1,4 +1,5 @@
 const request = require("request");
+require('dotenv').config();
 
 const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN
 
