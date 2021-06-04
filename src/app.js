@@ -40,12 +40,6 @@ app.get("", (req, res) => {
   });
 });
 
-app.get("/help", (req, res) => {
-  res.render("help", {
-    pageName: "Help",
-  });
-});
-
 app.get("/forecast", (req, res) => {
   const { address } = req.query;
   if (!address) {
